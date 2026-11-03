@@ -5,13 +5,13 @@
 class Oa < Formula
   desc "OpenAleph on the command line, a drop-in replacement for the Python client"
   homepage "https://github.com/0x46616c6b/openaleph-cli"
-  version "0.2.3"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/0x46616c6b/openaleph-cli/releases/download/v0.2.3/oa_0.2.3_darwin_amd64.tar.gz"
-      sha256 "24a94524f8c939ecfaac0f6e303163380197f3b98825f63a44921492949abd93"
+      url "https://github.com/0x46616c6b/openaleph-cli/releases/download/v0.3.0/oa_0.3.0_darwin_amd64.tar.gz"
+      sha256 "09b26c80abd129e4b43bf4d551e548095dc70462b1e1a8a5fa92fcd4403f97f8"
 
       define_method(:install) do
         bin.install "oa"
@@ -19,8 +19,8 @@ class Oa < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/0x46616c6b/openaleph-cli/releases/download/v0.2.3/oa_0.2.3_darwin_arm64.tar.gz"
-      sha256 "132396912f5aba066a98214f68487e71a26f863a9ee4e477df47fb885c8c122d"
+      url "https://github.com/0x46616c6b/openaleph-cli/releases/download/v0.3.0/oa_0.3.0_darwin_arm64.tar.gz"
+      sha256 "c1b577053257ffb21173026f1f2b9295888a828e27aac7e4166987493355d49d"
 
       define_method(:install) do
         bin.install "oa"
@@ -31,16 +31,16 @@ class Oa < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0x46616c6b/openaleph-cli/releases/download/v0.2.3/oa_0.2.3_linux_amd64.tar.gz"
-      sha256 "d8d7fae2113402eeb9fd446b03a91c5beab8bf49620fe47d870a485e5ee2a1fb"
+      url "https://github.com/0x46616c6b/openaleph-cli/releases/download/v0.3.0/oa_0.3.0_linux_amd64.tar.gz"
+      sha256 "dd86a76d80b9a23f1f58352cb410a864e4bae31d078520b4ee498e45d6770e57"
       define_method(:install) do
         bin.install "oa"
         generate_completions_from_executable(bin/"oa", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0x46616c6b/openaleph-cli/releases/download/v0.2.3/oa_0.2.3_linux_arm64.tar.gz"
-      sha256 "af57d977b1754da87c6a2bdca17fda248264c10a6b9905473dc45aba84af4688"
+      url "https://github.com/0x46616c6b/openaleph-cli/releases/download/v0.3.0/oa_0.3.0_linux_arm64.tar.gz"
+      sha256 "57fa3484fb6cb0fb3d9cee5eb1d991e28ce080a604676c226d4882cf00316b47"
       define_method(:install) do
         bin.install "oa"
         generate_completions_from_executable(bin/"oa", "completion")
